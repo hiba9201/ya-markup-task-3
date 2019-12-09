@@ -1,0 +1,663 @@
+@font-face
+{
+    font-family: 'Yandex Sans Text';
+    src: url('./fonts/YandexSansText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Yandex Sans Text';
+    src: url('./fonts/YandexSansText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body
+{
+    margin: 0;
+    padding: 10px 15px;
+    display: grid;
+    grid-template: 'header header header    email ' auto
+        '.      news   yandex-ad email ' auto
+        '.      news   yandex-ad .     ' auto
+        'logo   search search    .     ' 100px
+        '.      panel  panel     .     ' auto
+        / 12%   auto    25%       15%;
+    grid-gap: 10px;
+    font-family: 'Yandex Sans Text', Arial, sans-serif;
+}
+
+.header
+{
+    grid-area: header;
+}
+
+.nav
+{
+    padding: 10px;
+}
+
+.nav__link
+{
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+    font-size: 13px;
+    transition: color .1s linear;
+}
+
+.nav__link_color_gray
+{
+    color: #808080;
+}
+
+.nav__link:hover
+{
+    color: #f12727;
+}
+
+.nav__geo-link::before
+{
+    content: '';
+    display: inline-block;
+    background-image: url('./media/geo-tag.svg');
+    height: 16px;
+    width: 16px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
+.nav__geo-link:hover::before
+{
+    background-position-y: 16px;
+}
+
+.email__input
+{
+    display: none;
+}
+
+.email__input:checked ~ .email__title > .email__avatar,
+.email__input:checked ~ .email__info > .email__info-link:not(:first-child)
+{
+    visibility: hidden;
+    position: absolute;
+}
+
+.email
+{
+    grid-area: email;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+    padding: 6px 10px;
+    border-radius: 5px;
+    height: max-content;
+}
+
+.email__title
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.email__name
+{
+    font-size: 15px;
+    margin: 5px 0 0;
+    height: max-content;
+}
+
+.email__name::first-letter
+{
+    color: #f12727;
+}
+
+.email__avatar
+{
+    border: blue 2px solid;
+    border-top: darkorange 2px solid;
+    border-right: yellow 2px solid;
+    padding: 2px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    transform: rotate(45deg);
+}
+
+.email__avatar img
+{
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+.email__info
+{
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.email__info-link:hover > span
+{
+    color: #f12727;
+}
+
+.email__info-link
+{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.email__info-link > span
+{
+    transition: color .1s linear;
+}
+
+.email__info_color_gray
+{
+    color: #808080;
+}
+
+.news-widget
+{
+    grid-area: news;
+}
+
+.widget__tabs-additional
+{
+    font-size: 12px;
+}
+
+.widget__list-item-tag
+{
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.news-widget__currencies-title
+{
+    margin: 0;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.news-widget__currencies
+{
+    display: inline-block;
+    padding: 0;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+.news-widget__currency
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0 0 0 12px;
+}
+
+.news-widget_margin-right_5px
+{
+    margin-right: 5px;
+}
+
+.yandex-adv
+{
+    grid-area: yandex-ad;
+    width: 65%;
+}
+
+.yandex-adv__image
+{
+    width: 90px;
+    height: 90px;
+    object-fit: none;
+    object-position: left;
+}
+
+.yandex-adv__info
+{
+    margin-top: 10px;
+}
+
+.yandex-adv__title
+{
+    color: #1654ba;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.yandex-adv__title:hover
+{
+    color: #f12727;
+}
+
+.yandex-adv_wrap_nowrap
+{
+    white-space: nowrap;
+}
+
+.yandex-adv__description
+{
+    font-size: 14px;
+
+}
+
+.yandex-adv__info span
+{
+    display: inline-block;
+    background: #edf2f7;
+    color: gray;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 8px;
+    vertical-align: middle;
+}
+
+.yandex-logo
+{
+    grid-area: logo;
+    position: relative;
+}
+
+.yandex-logo__image
+{
+    width: 120px;
+    position: absolute;
+    right: 0;
+    top: 25%;
+}
+
+.search-bar
+{
+    grid-area: search;
+}
+
+.search-bar__categories
+{
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+.search-bar__category
+{
+    font-size: 17px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+.search-bar__link
+{
+    text-decoration: none;
+    color: #1654ba;
+    transition: color .1s linear;
+}
+
+.search-bar__link:hover
+{
+    color: #f12727;
+}
+
+.search-bar__search-area
+{
+    display: flex;
+    width: 95%;
+}
+
+.search-bar__search-input
+{
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border: #fadc67 2px solid;
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.search-bar__search-input:focus
+{
+    outline: none;
+}
+
+.search-bar__image
+{
+    padding-right: 5px;
+    height: 40px;
+    box-sizing: border-box;
+    border-top: #fadc67 2px solid;
+    border-bottom: #fadc67 2px solid;
+}
+
+.search-bar__image img
+{
+    height: 36px;
+}
+
+.search-bar__find-button
+{
+    border: none;
+    background-color: #fadc67;
+    width: 90px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.search-bar__find-button:focus
+{
+    outline: none;
+}
+
+.search-bar__area-end
+{
+    background: url('./media/search-button-end.svg');
+    height: 40px;
+    width: 16px;
+}
+
+.search-bar__text
+{
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.widget-panel
+{
+    grid-area: panel;
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr;
+    grid-gap: 10px 5px;
+}
+
+.widget_font-size_32px
+{
+    font-size: 32px;
+}
+
+.footer
+{
+    background: #f0f0f0;
+    position: fixed;
+    z-index: 4000;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #848484;
+}
+
+.footer__link
+{
+    text-decoration: none;
+    color: #848484;
+    transition: color .1s linear;
+}
+
+.footer__link:hover
+{
+    color: #f12727;
+}
+
+.footer__nav
+{
+    padding: 0 0 0 40px;
+    margin: 0;
+}
+
+.footer__nav-item
+{
+    padding: 0;
+    margin: 0 20px 0 0;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.footer__nav-copyright
+{
+    font-size: 14px;
+    margin: 0;
+    padding-right: 40px;
+}
+
+.widget
+{
+    height: max-content;
+}
+
+.widget_color_gray
+{
+    color: #c2c2c2;
+}
+
+.widget__visible
+{
+    display: none;
+}
+
+.widget__visible:checked ~ .widget__visibility-label
+{
+    transform: rotate(180deg);
+}
+
+.widget__visibility-label
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background: url('./media/hide-widget-arrow.svg');
+    transition: transform .2s linear, opacity .1s linear;
+    opacity: .25;
+    cursor: pointer;
+}
+
+.widget__visibility-label:hover
+{
+    opacity: .5;
+}
+
+.widget__tabs-lbl
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.widget__content
+{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.widget__content_line-height_1-5em
+{
+    margin-top: 4px;
+    line-height: 1.6em;
+}
+
+.widget__content_nowrap
+{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.widget__title
+{
+    color: #1654ba;
+    transition: color .1s linear;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.widget__content-item
+{
+    margin: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2em;
+}
+
+.widget__content-list-item
+{
+    margin: 5px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.widget__image
+{
+    width: 55px;
+    height: 55px;
+    margin-right: 0;
+    margin-top: -5px;
+}
+
+.widget__content-item p
+{
+    margin: 0;
+    display: inline;
+}
+
+.widget__tab
+{
+    color: #78a2dc;
+    list-style: none;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.widget__tab > label
+{
+    cursor: pointer;
+}
+
+.widget__title:hover
+{
+    color: #f12727;
+}
+
+.widget__tab-input
+{
+    display: none;
+}
+
+.widget__tab-input-1:checked ~ .widget__tabs-lbl > .widget__tab:nth-child(1),
+.widget__tab-input-2:checked ~ .widget__tabs-lbl > .widget__tab:nth-child(2),
+.widget__tab-input-3:checked ~ .widget__tabs-lbl > .widget__tab:nth-child(3)
+{
+    color: #1654ba;
+}
+
+.widget__tab-input-1:checked ~ .tabs-widget__tab-1 > .tabs-widget__tab-list,
+.widget__tab-input-2:checked ~ .tabs-widget__tab-2 > .tabs-widget__tab-list,
+.widget__tab-input-3:checked ~ .tabs-widget__tab-3 > .tabs-widget__tab-list
+{
+    display: block;
+}
+
+.widget__visible:checked ~ .tabs-widget__tab,
+.widget__visible:checked ~ .widget__content,
+.widget__visible:checked ~ .widget__tabs-lbl > .widget__tab,
+.widget__visible:checked ~ .widget__tabs-additional
+{
+    display: none;
+}
+
+.widget__visible:checked ~ .widget__tabs-lbl > .widget__tab:first-child
+{
+    display: block;
+}
+
+.widget__visible:checked ~ .widget__additional-info
+{
+    display: block;
+}
+
+.widget__additional-info
+{
+    display: none;
+    font-size: 16px;
+}
+
+.widget__additional-info p
+{
+    margin-top: 5px;
+}
+
+.tabs-widget__tab-list
+{
+    margin: 5px 0 0 -20px;
+    padding: 0;
+    display: none;
+}
+
+.tabs-widget__tab-list-item
+{
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.tabs-widget__tab-list-item a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.tabs-widget__tab-list-item a:hover
+{
+    color: #f12727;
+}
+
+.widget_font-weight_bold
+{
+    font-weight: 500;
+}
+
+.widget_margin-right
+{
+    margin-right: 10px;
+}
+
+.widget_margin-left
+{
+    margin-left: 10px;
+}
+
+.widget__tabs-additional-image
+{
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.widget__link
+{
+    text-decoration: none;
+    color: inherit;
+    transition: color .1s linear;
+    width: max-content;
+}
+
+.widget__link:hover
+{
+    color: #f12727;
+}
