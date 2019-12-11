@@ -20,7 +20,7 @@
             Пелевина Настя
         </a>
         <a href="#me" class="email__avatar">
-            <img src="./media/avatar.jpeg" alt="Аватар">
+            <img class="email__avatar-image" src="./media/avatar.jpeg" alt="Аватар">
         </a>
     </label>
     <label for="email-widget" class="email__info">
@@ -37,7 +37,7 @@
 </div>
 <div class="widget tabs-widget news-widget">
     <input id="hide-news-checkbox"
-           class="widget__visible"
+           class="widget__visibility-input"
            type="checkbox">
     <input class="widget__tab-input widget__tab-input-1"
            id="news-tab-1"
@@ -251,7 +251,7 @@
 </div>
 <div class="widget-panel">
     <div class="widget weather-widget">
-        <input id="hide-weather-checkbox" class="widget__visible" type="checkbox">
+        <input id="hide-weather-checkbox" class="widget__visibility-input" type="checkbox">
         <h3 class="widget__title">Погода</h3>
         <label for="hide-weather-checkbox" class="widget__visibility-label"></label>
         <div class="widget__additional-info">
@@ -266,7 +266,7 @@
         </div>
     </div>
     <div class="widget traffic-widget">
-        <input id="hide-traffic-checkbox" class="widget__visible" type="checkbox">
+        <input id="hide-traffic-checkbox" class="widget__visibility-input" type="checkbox">
         <h3 class="widget__title">Пробки</h3>
         <label for="hide-traffic-checkbox" class="widget__visibility-label"></label>
         <div class="widget__additional-info">
@@ -283,13 +283,13 @@
         </div>
     </div>
     <div class="widget map-widget">
-        <input id="hide-map-checkbox" class="widget__visible" type="checkbox">
+        <input id="hide-map-checkbox" class="widget__visibility-input" type="checkbox">
         <h3 class="widget__title">Карта Москвы</h3>
         <label for="hide-map-checkbox" class="widget__visibility-label"></label>
         <div class="widget__additional-info">
             <p class="widget_color_gray">Навигация в городе</p>
         </div>
-        <div class="widget__content widget__content_line-height_1-5em">
+        <div class="widget__content widget__content_line-height_increased">
             <a class="widget__content-item widget__link" href="#">Метро</a>
             <a class="widget__content-item widget__link" href="#">Такси</a>
             <a class="widget__content-item widget__link" href="#">Расписания</a>
@@ -297,7 +297,7 @@
         </div>
     </div>
     <div class="widget">
-        <input id="hide-visited-checkbox" class="widget__visible" type="checkbox">
+        <input id="hide-visited-checkbox" class="widget__visibility-input" type="checkbox">
         <h3 class="widget__title">Посещаемое</h3>
         <label for="hide-visited-checkbox" class="widget__visibility-label"></label>
         <div class="widget__additional-info">
@@ -316,7 +316,7 @@
         </ul>
     </div>
     <div class="widget">
-        <input id="hide-tele-checkbox" class="widget__visible" type="checkbox">
+        <input id="hide-tele-checkbox" class="widget__visibility-input" type="checkbox">
         <h3 class="widget__title">Телепрограмма</h3>
         <label for="hide-tele-checkbox" class="widget__visibility-label"></label>
         <div class="widget__additional-info">
@@ -338,7 +338,7 @@
         </ul>
     </div>
     <div class="widget tabs-widget">
-        <input id="hide-live-checkbox" class="widget__visible" type="checkbox">
+        <input id="hide-live-checkbox" class="widget__visibility-input" type="checkbox">
         <input class="widget__tab-input widget__tab-input-1"
                id="live-tab-1" name="live-tabs" type="radio" checked>
         <input class="widget__tab-input widget__tab-input-2" id="live-tab-2" name="live-tabs" type="radio">

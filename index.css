@@ -22,7 +22,7 @@ body
     grid-template: 'header header header    email ' auto
         '.      news   yandex-ad email ' auto
         '.      news   yandex-ad .     ' auto
-        'logo   search search    .     ' 100px
+        'logo   search search    .     ' auto
         '.      panel  panel     .     ' auto
         / 12%   auto    25%       15%;
     grid-gap: 10px;
@@ -125,7 +125,7 @@ body
     transform: rotate(45deg);
 }
 
-.email__avatar img
+.email__avatar-image
 {
     border-radius: 50%;
     transform: rotate(-45deg);
@@ -374,6 +374,7 @@ body
 
 .widget-panel
 {
+    padding-top: 15px;
     grid-area: panel;
     display: grid;
     grid-template: auto auto / 1fr 1fr 1fr;
@@ -442,12 +443,12 @@ body
     color: #c2c2c2;
 }
 
-.widget__visible
+.widget__visibility-input
 {
     display: none;
 }
 
-.widget__visible:checked ~ .widget__visibility-label
+.widget__visibility-input:checked ~ .widget__visibility-label
 {
     transform: rotate(180deg);
 }
@@ -482,7 +483,7 @@ body
     padding: 0;
 }
 
-.widget__content_line-height_1-5em
+.widget__content_line-height_increased
 {
     margin-top: 4px;
     line-height: 1.6em;
@@ -571,20 +572,20 @@ body
     display: block;
 }
 
-.widget__visible:checked ~ .tabs-widget__tab,
-.widget__visible:checked ~ .widget__content,
-.widget__visible:checked ~ .widget__tabs-lbl > .widget__tab,
-.widget__visible:checked ~ .widget__tabs-additional
+.widget__visibility-input:checked ~ .tabs-widget__tab,
+.widget__visibility-input:checked ~ .widget__content,
+.widget__visibility-input:checked ~ .widget__tabs-lbl > .widget__tab,
+.widget__visibility-input:checked ~ .widget__tabs-additional
 {
     display: none;
 }
 
-.widget__visible:checked ~ .widget__tabs-lbl > .widget__tab:first-child
+.widget__visibility-input:checked ~ .widget__tabs-lbl > .widget__tab:first-child
 {
     display: block;
 }
 
-.widget__visible:checked ~ .widget__additional-info
+.widget__visibility-input:checked ~ .widget__additional-info
 {
     display: block;
 }
