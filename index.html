@@ -2,8 +2,451 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./index.css">
     <title>Задача «Главная Яндекса»</title>
 </head>
 <body>
+<header class="header">
+    <nav class="nav">
+        <a class="nav__geo-link nav__link" href="#city">Москва</a>
+        <a class="nav__link" href="#start">Сделать стартовой</a>
+        <a class="nav__link nav__link_color_gray" href="#conf">Конфиденциальность</a>
+    </nav>
+</header>
+<div class="email widget">
+    <input id="email-widget" class="email__input" type="checkbox">
+    <label for="email-widget" class="email__title">
+        <a class="email__name widget__link widget_font-weight_bold" href="#me">
+            Пелевина Настя
+        </a>
+        <a href="#me" class="email__avatar">
+            <img class="email__avatar-image" src="./media/avatar.jpeg" alt="Аватар">
+        </a>
+    </label>
+    <label for="email-widget" class="email__info">
+        <a class="email__info-link widget__link" href="#mails">
+            Почта <span class="email__info_color_gray">новых нет</span>
+        </a>
+        <a class="email__info-link widget__link" href="#write">
+            Написать письмо
+        </a>
+        <a class="email__info-link widget__link" href="#disk">
+            Диск
+        </a>
+    </label>
+</div>
+<div class="widget tabs-widget news-widget">
+    <input id="hide-news-checkbox"
+           class="widget__visibility-input"
+           type="checkbox">
+    <input class="widget__tab-input widget__tab-input-1"
+           id="news-tab-1"
+           name="news-tabs"
+           type="radio"
+           checked>
+    <input class="widget__tab-input widget__tab-input-2"
+           id="news-tab-2" name="news-tabs" type="radio">
+    <input class="widget__tab-input widget__tab-input-3"
+           id="news-tab-3" name="news-tabs" type="radio">
+    <ul class="widget__tabs-lbl">
+        <li class="widget__tab widget__title">
+            <label for="news-tab-1">Сейчас в СМИ</label>
+        </li>
+        <li class="widget__tab widget__title">
+            <label for="news-tab-2">в Москве</label>
+        </li>
+        <li class="widget__tab widget__title">
+            <label for="news-tab-3">Интересное</label>
+        </li>
+    </ul>
+    <span class="widget__tabs-additional widget_color_gray">5.12, 13:31</span>
+    <label for="hide-news-checkbox" class="widget__visibility-label"></label>
+    <div class="widget__additional-info">
+        <p class="widget_color_gray">Актуальные новости и события дня</p>
+    </div>
+    <div class="tabs-widget__tab-1 tabs-widget__tab">
+        <ul class="tabs-widget__tab-list">
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Путин назвал условия Украины по транзиту газа неприемлемыми
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    ПФР сообщил о прибавке неработающим пенсионерам с 1 января 2020 года
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Меркель объяснила причину высылки российских дипломатов из Германии
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    В МИД Украины отреагировали на заявление Токаева о Крыме
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Зеленский поговорил по телефону с ведущей «Россия 1» Скабеевой
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="tabs-widget__tab-2 tabs-widget__tab">
+        <ul class="tabs-widget__tab-list">
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Путин назвал условия Украины по транзиту газа неприемлемыми
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    ПФР не сообщил о прибавке неработающим пенсионерам с 1 января 2020 года
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Меркель объяснила причину высылки российских дипломатов из Германии
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    В МИД Украины отреагировали на заявление Токаева о Крыме
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Зеленский поговорил по телефону с ведущей «Россия 1» Скабеевой
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="tabs-widget__tab-3 tabs-widget__tab">
+        <ul class="tabs-widget__tab-list">
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Путин не назвал условия Украины по транзиту газа неприемлемыми
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    ПФР сообщил о прибавке неработающим пенсионерам с 1 января 2020 года
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Меркель объяснила причину высылки российских дипломатов из Германии
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    В МИД Украины отреагировали на заявление Токаева о Крыме
+                </a>
+            </li>
+            <li class="tabs-widget__tab-list-item">
+                <a href="#">
+                    <img class="widget__list-item-tag" src="./media/news-widget-tag.webp" alt="tag">
+                    Зеленский поговорил по телефону с ведущей «Россия 1» Скабеевой
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3 class="news-widget__currencies-title">Курсы ЦБ:</h3>
+        <ul class="news-widget__currencies">
+            <li class="news-widget__currency">
+                <span class="widget_font-weight_bold news-widget_margin-right_5px">USD</span>
+                64,10<span class="widget_color_gray widget_margin-left">+0,13</span>
+            </li>
+            <li class="news-widget__currency">
+                <span class="widget_font-weight_bold news-widget_margin-right_5px">EUR</span>
+                70,44
+            </li>
+            <li class="news-widget__currency">
+                <span class="widget_font-weight_bold news-widget_margin-right_5px">НЕФТЬ</span>
+                62,81<span class="widget_color_gray widget_margin-left">-2,10%</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="yandex-adv">
+    <a href="https://dialogs.yandex.ru">
+        <img class="yandex-adv__image" src="./media/yandex-ad.png" alt="Премия Алисы">
+    </a>
+    <div class="yandex-adv__info">
+        <a href="https://dialogs.yandex.ru"
+           class="yandex-adv__title widget_font-weight_bold">
+            Что такое премия Алисы и как ее получить
+        </a>
+        <p class="yandex-adv__description yandex-adv_wrap_nowrap">
+            Объясняют разработчики <span>0+</span>
+        </p>
+    </div>
+</div>
+<div class="yandex-logo">
+    <a href="https://yandex.ru" target="_blank" rel="noopener">
+        <img class="yandex-logo__image" src="./media/yandex-logo.png" alt="Яндекс">
+    </a>
+</div>
+<div class="search-bar">
+    <ul class="search-bar__categories">
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Видео</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Картинки</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Новости</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Карты</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Маркет</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Переводчик</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Музыка</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">Афиша</a>
+        </li>
+        <li class="search-bar__category">
+            <a class="search-bar__link" href="#">ещё</a>
+        </li>
+    </ul>
+    <div class="search-bar__search-area">
+        <input class="search-bar__search-input" id="search-area" type="text">
+        <div class="search-bar__micro search-bar__image">
+            <img src="media/search-micro.png" alt="Микрофон">
+        </div>
+        <div class="search-bar__keyboard search-bar__image">
+            <img src="media/search-keyboard.png" alt="Клавиатура">
+        </div>
+        <button class="search-bar__find-button">Найти</button>
+        <div class="search-bar__area-end"></div>
+    </div>
+    <p class="search-bar__text">
+        Найдется всё. Например,
+        <span class="widget_color_gray">насколько или на сколько</span>
+    </p>
+</div>
+<div class="widget-panel">
+    <div class="widget weather-widget">
+        <input id="hide-weather-checkbox" class="widget__visibility-input" type="checkbox">
+        <h3 class="widget__title">Погода</h3>
+        <label for="hide-weather-checkbox" class="widget__visibility-label"></label>
+        <div class="widget__additional-info">
+            <p class="widget_color_gray">Прогноз погоды рядом с вами</p>
+        </div>
+        <div class="widget__content widget__content_nowrap">
+            <a href="https://yandex.ru/weather/moscow" target="_blank" rel="noopener">
+                <img class="widget__image widget__content-item" src="media/weather-image.png" alt="Погода">
+            </a>
+            <p class="widget_font-size_32px widget__content-item">-1°</p>
+            <p class="widget__content-item">Вечером 0,<br>ночью -1</p>
+        </div>
+    </div>
+    <div class="widget traffic-widget">
+        <input id="hide-traffic-checkbox" class="widget__visibility-input" type="checkbox">
+        <h3 class="widget__title">Пробки</h3>
+        <label for="hide-traffic-checkbox" class="widget__visibility-label"></label>
+        <div class="widget__additional-info">
+            <p class="widget_color_gray">Ситуация на дорогах в вашем городе</p>
+        </div>
+        <div class="widget__content widget__content_nowrap">
+            <a href="https://yandex.ru/maps/213/moscow/probki" target="_blank" rel="noopener">
+                <img class="widget__image widget__content-item" src="media/traffic-image.png" alt="Пробки">
+            </a>
+            <p class="widget_font-size_32px widget__content-item">5</p>
+            <div class="widget__content-item">
+                <p>Ближайшие 5 часов движение затруднено</p>
+            </div>
+        </div>
+    </div>
+    <div class="widget map-widget">
+        <input id="hide-map-checkbox" class="widget__visibility-input" type="checkbox">
+        <h3 class="widget__title">Карта Москвы</h3>
+        <label for="hide-map-checkbox" class="widget__visibility-label"></label>
+        <div class="widget__additional-info">
+            <p class="widget_color_gray">Навигация в городе</p>
+        </div>
+        <div class="widget__content widget__content_line-height_increased">
+            <a class="widget__content-item widget__link" href="#">Метро</a>
+            <a class="widget__content-item widget__link" href="#">Такси</a>
+            <a class="widget__content-item widget__link" href="#">Расписания</a>
+            <a class="widget__content-item widget__link" href="#">Сообщество соседей</a>
+        </div>
+    </div>
+    <div class="widget">
+        <input id="hide-visited-checkbox" class="widget__visibility-input" type="checkbox">
+        <h3 class="widget__title">Посещаемое</h3>
+        <label for="hide-visited-checkbox" class="widget__visibility-label"></label>
+        <div class="widget__additional-info">
+            <p class="widget_color_gray">Популярные сервисы Яндекса</p>
+        </div>
+        <ul class="widget__content">
+            <li class="widget__content-list-item">
+                <span class="widget_font-weight_bold">Беру</span> - pankratov black friday
+            </li>
+            <li class="widget__content-list-item">
+                <span class="widget_font-weight_bold">Недвижимость</span> - классический стиль
+            </li>
+            <li class="widget__content-list-item">
+                <span class="widget_font-weight_bold">Авто.ру</span> - зимняя резина для авто
+            </li>
+        </ul>
+    </div>
+    <div class="widget">
+        <input id="hide-tele-checkbox" class="widget__visibility-input" type="checkbox">
+        <h3 class="widget__title">Телепрограмма</h3>
+        <label for="hide-tele-checkbox" class="widget__visibility-label"></label>
+        <div class="widget__additional-info">
+            <p class="widget_color_gray">Программа передач по каналам</p>
+        </div>
+        <ul class="widget__content">
+            <li class="widget__content-list-item">
+                <span class="widget_margin-right">12:25</span>"Игра в бисер" с...
+                <span class="widget_margin-left widget_color_gray">Культура</span>
+            </li>
+            <li class="widget__content-list-item">
+                <span class="widget_margin-right">12:30</span>Новости
+                <span class="widget_margin-left widget_color_gray">РЕН ТВ</span>
+            </li>
+            <li class="widget__content-list-item">
+                <span class="widget_margin-right">12:30</span>Спаси свою любовь
+                <span class="widget_margin-left widget_color_gray">ТНТ</span>
+            </li>
+        </ul>
+    </div>
+    <div class="widget tabs-widget">
+        <input id="hide-live-checkbox" class="widget__visibility-input" type="checkbox">
+        <input class="widget__tab-input widget__tab-input-1"
+               id="live-tab-1" name="live-tabs" type="radio" checked>
+        <input class="widget__tab-input widget__tab-input-2" id="live-tab-2" name="live-tabs" type="radio">
+        <input class="widget__tab-input widget__tab-input-3" id="live-tab-3" name="live-tabs" type="radio">
+        <ul class="widget__tabs-lbl">
+            <li class="widget__tab widget__title">
+                <label for="live-tab-1">Эфир</label>
+            </li>
+            <li class="widget__tab widget__title">
+                <label for="live-tab-2">Фильмы</label>
+            </li>
+            <li class="widget__tab widget__title">
+                <label for="live-tab-3">Сериалы</label>
+            </li>
+        </ul>
+        <img class="widget__tabs-additional widget__tabs-additional-image"
+             src="media/live-image.png" alt="NHL">
+        <label for="hide-live-checkbox" class="widget__visibility-label"></label>
+        <div class="widget__additional-info">
+            <p class="widget_color_gray">Эфир любимых каналов</p>
+        </div>
+        <div class="tabs-widget__tab-1 tabs-widget__tab">
+            <ul class="tabs-widget__tab-list">
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Малые реки Чернозе... <span class="widget_margin-left widget_color_gray">
+                        Охотник и рыболов</span>
+                    </a>
+                </li>
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        События<span class="widget_margin-left widget_color_gray">ОТВ 24</span>
+                    </a>
+                </li>
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Особое мнение // Повтор<span class="widget_margin-left widget_color_gray">
+                        Эхо Москвы</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs-widget__tab-2 tabs-widget__tab">
+            <ul class="tabs-widget__tab-list">
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Легенда №17<span class="widget_margin-left widget_color_gray">2013, драма</span>
+                    </a>
+                </li>
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Брат<span class="widget_margin-left widget_color_gray">1997, боевик</span>
+                    </a>
+                </li>
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Легенда<span class="widget_margin-left widget_color_gray">2015, триллер</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tabs-widget__tab-3 tabs-widget__tab">
+            <ul class="tabs-widget__tab-list">
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Джодха и Акбар:...<span class="widget_margin-left widget_color_gray">
+                        2013, мелодрама</span>
+                    </a>
+                </li>
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Барбоскины<span class="widget_margin-left widget_color_gray">2011, мультфильм</span>
+                    </a>
+                </li>
+                <li class="tabs-widget__tab-list-item">
+                    <a href="#">
+                        <img class="widget__list-item-tag" src="./media/live-tag.svg" alt="tag">
+                        Щенячий патруль<span class="widget_margin-left widget_color_gray">
+                        2013, мультфильм</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <ul class="footer__nav">
+        <li class="footer__nav-item"><a class="footer__link" href="#">Директ</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Метрика</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Реклама</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Касса</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Вакансии</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Блог</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Компания</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">About</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Конфиденциальность</a></li>
+        <li class="footer__nav-item"><a class="footer__link" href="#">Пользовательское соглашение</a></li>
+    </ul>
+    <a href="https://yandex.ru"
+       target="_blank" rel="noopener" class="footer__link footer__nav-copyright">&copy; Яндекс</a>
+</footer>
 </body>
 </html>
